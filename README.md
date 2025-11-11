@@ -4,6 +4,8 @@
 
 ### ⚠️ **Current Status:** Awaiting Experimental Validation from Firefox.
 
+---
+
 ### ⚙️ Upcoming Quality of Life (QoL) Improvements
 
 - [x] Image preview as a **thumbnail**, not the full-size image.
@@ -26,7 +28,22 @@
 
 ---
 
-
 ## ⚙️ Technical Details / How It Works
 
 **Custom Tab +** utilizes **IndexedDB** as its primary data store. Why? Because it allows for storing **large Blob objects** and provides **fast, local access** to user data.
+
+---
+
+## 🐳 Docker development
+
+Hot reload is included (HMR).
+
+To build the Docker image run:
+`docker compose build`
+
+To run the Docker container use:
+`docker compose up -d`
+
+
+The application should be accessible in your browser at 
+http://localhost:3000 (or the port specified in your configuration).
