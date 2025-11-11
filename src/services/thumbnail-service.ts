@@ -7,7 +7,7 @@ export async function generateThumbnail(imageBlob: Blob): Promise<Blob> {
 
     const url = URL.createObjectURL(imageBlob);
 
-    // Esperamos a que la imagen cargue
+    // Wait for the image to load
     await new Promise<void>((resolve, reject) => {
         img.onload = () => {
             URL.revokeObjectURL(url);
@@ -20,7 +20,7 @@ export async function generateThumbnail(imageBlob: Blob): Promise<Blob> {
         img.src = url;
     });
 
-    // Redimensionar manteniendo proporciones
+    // Resize while maintaining aspect ratio
     const MAX_WIDTH = 370;
     const MAX_HEIGHT = 370;
     let width = img.width;
@@ -42,7 +42,7 @@ export async function generateThumbnail(imageBlob: Blob): Promise<Blob> {
     canvas.height = height;
     ctx.drawImage(img, 0, 0, width, height);
 
-    // Convertir canvas a Blob usando async/await
+    // Convert canvas to Blob
     return await canvasToBlob(canvas);
 }
 
