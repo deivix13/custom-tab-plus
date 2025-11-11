@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "customTabs",
+  "short_name": "customTabs",
+  "version": "3.0.8",
+  "description": "A beautiful New Tab.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "customtab@deividcode.com",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "icons": {
+    "32": "icons/logo.svg",
+    "48": "icons/logo.svg",
+    "96": "icons/logo.svg",
+    "128": "icons/logo.svg"
+  },
+  "permissions": [
+    "storage"
+  ]
+}

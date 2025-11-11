@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  customtabs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: customtabs-dev
+    ports:
+      - "3001:3001"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
