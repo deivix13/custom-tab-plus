@@ -32,10 +32,8 @@ export async function generateThumbnail(imageBlob: Blob): Promise<Blob> {
             width = MAX_WIDTH;
         }
     } else {
-        if (height > MAX_HEIGHT) {
             width = Math.round(width * MAX_HEIGHT / height);
             height = MAX_HEIGHT;
-        }
     }
 
     canvas.width = width;
