@@ -1,26 +1,32 @@
-import { JSX, useRef, useState } from "react";
+import type { JSX } from "react";
+
+import { useRef, useState } from "react";
+
 import { uploadImage } from "../services/form-service";
 
 export function Form({ onUpload }: Readonly<{ onUpload: () => void }>): JSX.Element {
-
   type uploadStatus = "" | "Uploading" | "Success" | "Error";
   const [status, setStatus] = useState<uploadStatus>("");
-  
+
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files ? Array.from(e.target.files) : null;
-    if (!files || files.length === 0) return;
+    if (!files || files.length === 0)
+      return;
 
     setStatus("Uploading");
     try {
       await uploadImage(files);
       setStatus("Success");
       onUpload();
-    } catch (err) {
+    }
+    catch {
       setStatus("Error");
-    } finally {
-      if (inputRef.current) inputRef.current.value = "";
+    }
+    finally {
+      if (inputRef.current)
+        inputRef.current.value = "";
     }
   };
 

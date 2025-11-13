@@ -9,7 +9,7 @@
 ### ⚙️ Upcoming Quality of Life (QoL) Improvements
 
 - [x] Image preview as a **thumbnail**, not the full-size image.
-    - This significantly reduces memory usage on tab load.
+  - This significantly reduces memory usage on tab load.
 - [ ] Update background upon deleting the current background image.
 - [ ] Update background upon adding a new image.
 - [ ] Code Cleanup and Optimization (Taking out the trash, you know).
@@ -22,9 +22,9 @@
 
 ### 🌟 Key Features
 
-* **Automatic Rotation:** See a different photo from your collection every time you open a new tab.
-* **Clean Design:** Maintains the full functionality of your new tab.
-* **Easy Setup:** Upload your favorite images and you're ready to go.
+- **Automatic Rotation:** See a different photo from your collection every time you open a new tab.
+- **Clean Design:** Maintains the full functionality of your new tab.
+- **Easy Setup:** Upload your favorite images and you're ready to go.
 
 ---
 
@@ -44,6 +44,5 @@ To build the Docker image run:
 To run the Docker container use:
 `docker compose up -d`
 
-
-The application should be accessible in your browser at 
+The application should be accessible in your browser at
 http://localhost:3000 (or the port specified in your configuration).

@@ -1,7 +1,7 @@
-/// <reference types="vite-plugin-svgr/client" /> 
+/// <reference types="vite-plugin-svgr/client" />
 
-import { default as SettingSVG } from './public/icon.svg';
+import SettingSVG from "./public/icon.svg";
 
 export const Setting = {
-    SettingSVG
+  SettingSVG,
 };
