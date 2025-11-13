@@ -4,7 +4,7 @@ const DB_NAME = "MyDatabase";
 const DB_VERSION = 1;
 const STORE_NAME = "dataStore";
 
-let db = null;
+let db: IDBDatabase | null;
 let dbPromise: Promise<IDBDatabase> | null = null;
 
 async function getDB(): Promise<IDBDatabase> {
