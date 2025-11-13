@@ -1,26 +1,26 @@
 {
   "compilerOptions": {
     "target": "ES2022",
+    "jsx": "react-jsx",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "moduleDetection": "force",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "types": ["vite/client"],
-    "skipLibCheck": true,
-    "outDir": "./dist",
-    "jsx": "react-jsx",
 
     "moduleResolution": "bundler",
+    "types": ["vite/client"],
     "allowImportingTsExtensions": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-
     "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": false,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
+    "noEmit": true,
+    "outDir": "./dist",
     "forceConsistentCasingInFileNames": true,
+    "erasableSyntaxOnly": false,
+    "noUncheckedSideEffectImports": true,
+    "skipLibCheck": true
   },
   "include": ["src", "./index.ts", "tailwind.config.js"],
   "exclude": ["node_modules", "dist"]
